@@ -231,23 +231,30 @@
     name: 'wv-flow',
 
     props: {
-      type: {
+      direction: {
         type: String,
-        default: 'horizontal'
-      },
-      bubblePosition: {
-        type: String,
-        default: 'top'
+        default: 'horizontal',
+        validator: (val) => {
+          return val === 'horizontal' || val === 'vertical'
+        }
       },
       labelPosition: {
         type: String,
         default: 'bottom'
+      },
+      showBubble: {
+        type: Boolean,
+        default: true
       }
     },
 
     data() {
       return {
       }
+    },
+
+    mounted() {
+      // if (this.direction === 'horizontal' && this.labelPosition ===)
     },
 
     watch: {
