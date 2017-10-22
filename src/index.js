@@ -43,6 +43,8 @@ import TopTips from './components/top-tips/index'
 import InfiniteScroll from './components/infinite-scroll/index'
 import NumberSpinner from './components/number-spinner/index'
 import Flow from './components/flow/index'
+import FlowNode from './components/flow-node/index'
+import FlowLine from './components/flow-line/index'
 import 'weui/dist/style/weui.min.css'
 
 const version = '1.4.17'
@@ -89,6 +91,8 @@ const install = function (Vue, config = {}) {
   Vue.component(TopTips.name, TopTips)
   Vue.component(NumberSpinner.name, NumberSpinner)
   Vue.component(Flow.name, Flow)
+  Vue.component(FlowNode.name, FlowNode)
+  Vue.component(FlowLine.name, FlowLine)
   Vue.use(InfiniteScroll)
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
@@ -153,5 +157,7 @@ export default {
   TopTips,
   InfiniteScroll,
   NumberSpinner,
-  Flow
+  Flow,
+  FlowNode,
+  FlowLine
 }

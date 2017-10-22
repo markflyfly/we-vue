@@ -1,44 +1,24 @@
 <template>
-  <div class="weui-wepay-flow">
-    <div class="weui-wepay-flow__bd">
-      <slot></slot>
-    </div>
+  <div class="weui-wepay-flow__li" :class="{ 'weui-wepay-flow__li_done': done }">
+    <div class="weui-wepay-flow__state"><slot></slot></div>
+    <p class="weui-wepay-flow__title-bottom" v-text="title"></p>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'wv-flow',
+    name: 'wv-flow-node',
 
     props: {
-      direction: {
-        type: String,
-        default: 'horizontal',
-        validator: (val) => {
-          return val === 'horizontal' || val === 'vertical'
-        }
+      done: {
+        type: Boolean
       },
-      labelPosition: {
+      title: String,
+      titlePosition: {
         type: String,
         default: 'bottom'
-      },
-      showBubble: {
-        type: Boolean,
-        default: true
       }
-    },
-
-    data() {
-      return {}
-    },
-
-    mounted() {
-      // if (this.direction === 'horizontal' && this.labelPosition ===)
-    },
-
-    watch: {},
-
-    methods: {}
+    }
   }
 </script>
 
@@ -443,3 +423,4 @@
     font-size: 12px;
   }
 </style>
+

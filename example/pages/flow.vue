@@ -1,52 +1,38 @@
 <template>
-  <wv-flow></wv-flow>
+  <div>
+    <wv-flow>
+      <wv-flow-node :done="true" title="title">1</wv-flow-node>
+      <wv-flow-line type="process"></wv-flow-line>
+      <wv-flow-node title="title">2</wv-flow-node>
+      <wv-flow-line></wv-flow-line>
+      <wv-flow-node title="title">3</wv-flow-node>
+      <wv-flow-line></wv-flow-line>
+      <wv-flow-node title="title">4</wv-flow-node>
+    </wv-flow>
+
+    <wv-flow>
+      <wv-flow-node :done="true" title="title">1</wv-flow-node>
+      <wv-flow-line type="process"></wv-flow-line>
+      <wv-flow-node title="title">2</wv-flow-node>
+      <wv-flow-line></wv-flow-line>
+      <wv-flow-node title="title">3</wv-flow-node>
+      <wv-flow-line></wv-flow-line>
+      <wv-flow-node title="title">4</wv-flow-node>
+    </wv-flow>
+  </div>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        type: 'ios',
-        sheetVisible: false,
-        actions: []
       }
     },
 
     methods: {
-      showActionsheet (type) {
-        this.type = type
-        this.sheetVisible = true
-      },
-
-      menuClick (key) {
-        console.log(`menu ${key} clicked`)
-      }
     },
 
     mounted () {
-      this.actions = [
-        {
-          name: '示例菜单1',
-          key: 'menu1',
-          method: () => {
-            this.menuClick('menu1')
-          }
-        },
-        {
-          name: '示例菜单2',
-          key: 'menu2',
-          method: () => {
-            this.menuClick('menu2')
-          }
-        },
-        {
-          name: '示例菜单3',
-          key: 'menu3',
-          method: () => {
-            this.menuClick('menu3')
-          }
-        }
-      ]
     }
   }
 </script>

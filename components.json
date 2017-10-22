@@ -43,5 +43,7 @@
   "top-tips": "./src/components/top-tips/index.js",
   "infinite-scroll": "./src/components/infinite-scroll/index.js",
   "number-spinner": "./src/components/number-spinner/index.js",
-  "flow": "./src/components/flow/index.js"
+  "flow": "./src/components/flow/index.js",
+  "flow-node": "./src/components/flow-node/index.js",
+  "flow-line": "./src/components/flow-line/index.js"
 }
