@@ -102,6 +102,12 @@
         "name": "Preview",
         "description": "表单预览",
         "icon": "39liulanyulan"
+      },
+      {
+        "path": "/uploader",
+        "name": "Uploader",
+        "description": "图片上传",
+        "icon": "39liulanyulan"
       }
     ]
   },
