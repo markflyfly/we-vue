@@ -85,6 +85,7 @@
     "vue-template-compiler": "^2.5.2",
     "vue-template-es2015-compiler": "^1.6.0",
     "vuex": "^2.5.0",
+    "vuex-router-sync": "^5.0.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
     "webpack-shell-plugin": "^0.4.3"
