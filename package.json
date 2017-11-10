@@ -25,14 +25,13 @@
     "src"
   ],
   "scripts": {
-    "dev": "npm run build:entry && cooking watch -c build/cooking.demo.js -p",
-    "dist": "npm run clean && npm run build:entry && npm run lint && cooking build -c build/cooking.conf.js,build/cooking.common.js,build/cooking.component.js,build/cooking.demo.js -p",
-    "build:entry": "node build/bin/build-entry.js",
-    "build:demo": "cooking build -c build/cooking.demo.js -p",
-    "pub": "sh build/release.sh",
-    "clean": "rm -rf lib",
-    "lint": "eslint src/**/*.js build/**/*.js --quiet",
-    "test": "echo 0"
+    "dev": "node build/dev-server.js",
+    "start": "npm run dev",
+    "build": "node build/build.js",
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "e2e": "node test/e2e/runner.js",
+    "test": "npm run unit && npm run e2e",
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
     "css3transform": "^1.1.8",
