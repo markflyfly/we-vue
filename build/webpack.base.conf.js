@@ -9,10 +9,6 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: {
-    app: './example/main.js',
-    components: ['./src/index.js']
-  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -33,7 +29,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
+        include: [resolve('src'), resolve('test'), resolve('example')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
