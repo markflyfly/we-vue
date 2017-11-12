@@ -9,6 +9,9 @@ function resolve (dir) {
 }
 
 module.exports = {
+  entry: {
+    example: './example/main.js'
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -29,7 +32,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test'), resolve('example')],
+        include: [resolve('src'), resolve('example'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -42,7 +45,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'), resolve('example'), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
