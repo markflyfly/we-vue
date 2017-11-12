@@ -1,10 +1,10 @@
-const Components = require('../../components.json')
+const Components = require('../components.json')
 const fs = require('fs')
 const render = require('json-templater/string')
 const uppercamelcase = require('uppercamelcase')
 const path = require('path')
 
-const OUTPUT_PATH = path.join(__dirname, '../../src/index.js')
+const OUTPUT_PATH = path.join(__dirname, '../src/index.js')
 const IMPORT_TEMPLATE = 'import {{name}} from \'./components/{{package}}/index\''
 const ISNTALL_COMPONENT_TEMPLATE = '  Vue.component({{name}}.name, {{name}})'
 const MAIN_TEMPLATE = `{{include}}
@@ -75,7 +75,7 @@ ComponentNames.forEach(name => {
 let template = render(MAIN_TEMPLATE, {
   include: includeComponentTemplate.join('\n'),
   install: installTemplate.join('\n'),
-  version: process.env.VERSION || require('../../package.json').version,
+  version: process.env.VERSION || require('../package.json').version,
   list: listTemplate.join(',\n')
 })
 
