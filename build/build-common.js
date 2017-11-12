@@ -9,12 +9,12 @@ const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
-const webpackConfig = require('./webpack.component.conf')
+const webpackConfig = require('./webpack.cjs.conf')
 
-const spinner = ora('building components...')
+const spinner = ora('building commonjs formatted...')
 spinner.start()
 
-rm(path.join(__dirname, '../lib'), err => {
+rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
     spinner.stop()

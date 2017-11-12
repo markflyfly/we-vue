@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "build": "node build/build.js",
+    "build:common": "node build/build-common.js",
     "build:component": "node build/build-component.js",
     "build:demo": "node build/build-demo.js",
     "dev": "node build/dev-server.js",
