@@ -26,10 +26,11 @@
   ],
   "scripts": {
     "build": "node build/build.js",
+    "build:component": "node build/build-component.js",
+    "build:demo": "node build/build-demo.js",
     "dev": "node build/dev-server.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
     "start": "npm run dev",
-    "build:demo": "node build/build-demo.js",
     "test": "npm run unit",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
   },
