@@ -27,7 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: false,
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'index.js',
+    filename: 'we-vue.common.js',
     libraryTarget: 'commonjs'
   },
   plugins: [
@@ -44,7 +44,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: 'style.mic.css'
+      filename: 'style.css'
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
