@@ -30,6 +30,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: 'we-vue.common.js',
     libraryTarget: 'commonjs'
   },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
+  },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
